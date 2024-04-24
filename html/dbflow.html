@@ -27,10 +27,10 @@ java에서 database에 접속해서 자료를 가져오기 위해서는 다음�
 라는 걸 알려준다.
 <br><br>
 <h2>실제접속</h2>
-
-<h2>  그 밖에, invalid value for parameter "lc_messages": "en_US.utf8ˮ 해결방법 </h2>
+<br><br>
+<h3>  그 밖에, invalid value for parameter "lc_messages": "en_US.utf8ˮ 해결방법 </h3>
 <br><input type="image" alt="image1" src="./img/docker en_US.urf8.jpg" width="800"/>
-<br> 위 이미지처럼 다음과 같은 에러발생시 다음과 같은 순서로 에러를 해결하면 된다.
+<br> 위 이미지처럼 도커 실행시 다음과 같은 에러발생시 다음과 같은 순서로 에러를 해결하면 된다.
 <ul>
 <li> powershell을 관리자권한으로 실행한다. </li>
 <li> docker cp postgres:/var/lib/postgresql/data/postgresql.conf . 을 실행하여 postgresql.conf 
