@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ 	<title>이벤트1</title>
+ 	<script>
+ 	
+ 	let index = 0;
+ 	
+ 	 // 함수를 정의한다.
+ 	 function onButtonClick()
+ 	 {
+ 		 //yogi라는 ID를 가진 요소를 찾아낸다.
+ 		 let yogi = document.getElementById("yogi");
+ 		 
+ 		 // index 값이 짝수면
+ 	 	 if (index % 2 == 0)
+ 	 		 yogi.textContent="바꿧어.";
+
+ 		 // index 값이 홀수면
+ 	 	 else
+ 	 		yogi.textContent="안녕 반가워.";
+ 	 	 
+ 		 // index를 하나 증가시킨다.
+ 		 index++;
+ 	 }
+ 	 
+	</script>
+</head>
+<body>
+ 	<h1 id="yogi"> 안녕 반가워.</h1>
+ 	<button onclick="onButtonClick()">글자바꾸기</button>
+ </body>
+</html>

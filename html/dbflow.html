@@ -35,10 +35,10 @@ java에서 database에 접속해서 자료를 가져오기 위해서는 다음�
 <li> powershell을 관리자권한으로 실행한다. </li>
 <li> docker cp postgres:/var/lib/postgresql/data/postgresql.conf . 을 실행하여 postgresql.conf 
 파일을 다운로드 받는다.</li>
-<li> postgresql.conf파일을 메모장으로 열어 Ctrl+F로 utf8을 검색한다.</li>
-<li> 검색된 'en_US.utf8'을 'C.UTF-8'로 변경하여 저장한다음</li>
-<li> 다시 powershell을 실행시킨 뒤, docker cp postgresql.conf postgres:/var/lib/postgresql/data/postgresql.conf . 해서 다시 내보낸다.</li>
+<li> postgresql.conf파일의 경로를 찾아 메모장으로 연 다음 Ctrl+F로 utf8을 검색한다.</li>
+<li> 검색된 'en_US.utf8'을 'C.UTF-8'로 변경하여 저장한다.</li>
+<li> 다시 powershell을 실행시킨 뒤, docker cp postgresql.conf postgres:/var/lib/postgresql/data/postgresql.conf 해서 다시 내보낸다.</li>
 <li> 내보낸 후 다시 도커를 run 하면, 이제는 testdb에 접속이 안되는 현상이 발생하게 되는데</li>
-<li> locale-gen en_US.utf8 하여 다시 'C.UTF-8'을 'en_US.utf8'로 돌려 놓고 도커 재실행해야한다.</li>
+<li> 이때 도커 Exec창에서 locale-gen en_US.utf8 한 뒤, 다시 도커 재실행해야한다.</li>
 
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ 	<title>버튼 연습</title>
+ 	<script>
+ 		function func1(str)
+ 		{
+ 			alert(str);
+ 		}
+ 		
+ 		function addone(num1)
+ 		{
+ 			// 넘어온 num1에 1을 더해서 alert
+ 			let result = num1 + 1;
+ 			alert (result);
+ 		}
+ 		
+ 		function addtwo(a, b)
+ 		{
+ 			// 넘어온 num1에 1을 더해서 alert
+ 			let c = a + b;
+ 			alert(c);
+ 		}
+ 		
+ 		function addthree(a, b)
+ 		{
+ 			// 넘어온 num1에 1을 더해서 alert
+ 			let d = a + b;
+ 			alert(d);
+ 			return d;
+ 			// 끝에 return이 들어간 함수값은 결과(ex. addthree(1, 2) = 3)가 치환한 값으로 바뀜.
+
+ 		}
+
+ 		let f = addthree(1, 2);
+ 		// 만약 위에서 return을 안하면 바로 밑의 lef f = addthree(1, 2); 는 정의가 되지 않음.
+ 		alert('f = ' + f );
+
+	</script>
+</head>
+<body>
+	<button onClick = "func1('hello')"> hello </button>
+	<button onClick = "func1('안녕')"> 안녕 </button>
+	<button onClick = "func1('반가워')"> 반가워 </button>
+	<button onClick = "addone(15)">AddOne: 15</button>
+	<button onClick = "addone(7, 2)">AddOne: 7, 2(문제버튼)</button>
+	<button onClick = "addtwo(5, 2)">AddTwo: 5, 2</button>
+	<button onClick = "addtwo(5)">AddTwo: 5(문제버튼)</button>
+</body>
+</html>
